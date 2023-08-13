@@ -2,6 +2,7 @@
 function getComputerChoice(){
     // Randomly generate number from 0 to 2
     const num = Math.floor(Math.random() * 3);
+
     // Return choice based on number
     switch(num){
         case 0: 
@@ -45,18 +46,26 @@ function playRound(playerSelection, computerSelection){
         }
     }
 }
+
 // Play a 5 round game
 function game(){
     // Initialize player and computer scores
     let playerScore = 0
     let computerScore = 0
+
     // Play rounds until either scores equals 5
     while(playerScore < 5 && computerScore < 5){
         // Prompt player for input until they input a proper value
         let keepGoing = true;
         let playerChoice;
+
         while(keepGoing){
-            playerChoice = prompt("Rock, paper, or scissors?" , "").toLowerCase;
+            playerChoice = prompt("Rock, paper, or scissors?" , "");
+            if(playerChoice === null){
+                return console.log("Game cancelled");
+            }
+            playerChoice = playerChoice.toLowerCase();
+            console.log(playerChoice);
             if(playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors"){
                 keepGoing = false;
             }
@@ -65,6 +74,7 @@ function game(){
         let computerChoice = getComputerChoice();
         // Play a round
         let result = playRound(playerChoice, computerChoice)
+
         switch(result){
             //If tie tell player they tied the round
             case "tie":
@@ -91,6 +101,7 @@ function game(){
                 break;
         }
     }
+    
     // Display message depending on game winner
     if(playerScore === 5){
         console.log("Congratulations! You won the game!")
@@ -100,4 +111,4 @@ function game(){
     }
 }
 
-console.log(game());
+game()
