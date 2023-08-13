@@ -1,7 +1,16 @@
 // Generate computer input
 function getComputerChoice(){
-    // Randomly returns rock, paper, or scissors
-
+    // Randomly generate a number from 0 to 2
+    const num = Math.floor(Math.random() * 3);
+    // Return choice based on number
+    switch(num){
+        case 0: 
+            return "rock";
+        case 1:
+            return "paper";
+        case 2:
+            return "scissors";
+    }
 }
 
 // Play a single round
@@ -13,7 +22,7 @@ function playRound(playerSelection, computerSelection){
 function game(){
     // Initialize player and computer scores
     
-    // Play rounds until the sum of the scores equals 5
+    // Play rounds until either scores equals 5
     while(){
         // Prompt player for input until they input a proper value
         while(){
@@ -21,11 +30,12 @@ function game(){
         }
         // Play a round
         switch(playRound()){
-            // If the computer wins add 1 to its score and tell the player they lost the round
-            
+            //If it's a tie tell the player it's a tie
+
             // If the player wins add 1 to their score and tell the player they won the round
 
-            //If it's a tie tell the player it's a tie
+            // If the computer wins add 1 to its score and tell the player they lost the round
+            
         }
 
     }
@@ -34,5 +44,3 @@ function game(){
 
     }
 }
-
-game();
