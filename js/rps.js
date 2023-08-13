@@ -21,26 +21,32 @@ function playRound(playerSelection, computerSelection){
 // Play a 5 round game
 function game(){
     // Initialize player and computer scores
-    
+    let playerScore = 0
+    let computerScore = 0
     // Play rounds until either scores equals 5
-    while(){
+    while(playerScore < 5 && computerScore < 5){
         // Prompt player for input until they input a proper value
-        while(){
-
+        let keepGoing = true;
+        let playerChoice
+        while(keepGoing){
+            playerChoice = prompt("Rock, paper, or scissors?" , "").toLowerCase;
+            if(playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors"){
+                keepGoing = false;
+            }
         }
         // Play a round
-        switch(playRound()){
+        
             //If it's a tie tell the player it's a tie
 
             // If the player wins add 1 to their score and tell the player they won the round
 
             // If the computer wins add 1 to its score and tell the player they lost the round
             
-        }
+        
 
     }
     // Display message depending on game winner
-    switch(){
-
-    }
+    
 }
+
+console.log(game())
