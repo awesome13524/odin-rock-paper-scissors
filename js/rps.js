@@ -17,6 +17,33 @@ function getComputerChoice(){
 // Take player input and computer input as parameters
 function playRound(playerSelection, computerSelection){
     // Return message depending on winner
+    if(playerSelection === computerSelection){
+        return "tie"
+    }
+    if(playerSelection === "rock"){
+        switch(computerSelection){
+            case "paper":
+                return "lose"
+            case "scissors":
+                return "win"
+        }
+    }
+    if(playerSelection === "paper"){
+        switch(computerSelection){
+            case "rock":
+                return "win"
+            case "scissors":
+                return "lose"
+        }
+    }
+    if(playerSelection === "scissors"){
+        switch(computerSelection){
+            case "rock":
+                return "lose"
+            case "paper":
+                return "win"
+        }
+    }
 }
 // Play a 5 round game
 function game(){
@@ -49,4 +76,4 @@ function game(){
     
 }
 
-console.log(game())
+console.log(game());
