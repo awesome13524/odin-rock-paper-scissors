@@ -65,7 +65,6 @@ function game(){
                 return console.log("Game cancelled");
             }
             playerChoice = playerChoice.toLowerCase();
-            console.log(playerChoice);
             if(playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors"){
                 keepGoing = false;
             }
