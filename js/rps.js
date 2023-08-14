@@ -65,7 +65,8 @@ function game(){
                 return console.log("Game cancelled");
             }
             playerChoice = playerChoice.toLowerCase();
-            if(playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors"){
+            if(playerChoice === "rock" || playerChoice === "paper" || 
+            playerChoice === "scissors"){
                 keepGoing = false;
             }
         }
@@ -80,23 +81,26 @@ function game(){
                 console.log("You chose: " + playerChoice);
                 console.log("The computer chose: " + computerChoice);
                 console.log("It's a tie");
-                console.log("Current score is player: " + playerScore + " computer: " + computerScore);
+                console.log("Current score is player: " + playerScore + 
+                " computer: " + computerScore);
                 break;
-            // If player wins add 1 to their score and tell player they won the round
+            // If player wins add 1 to their score and tell player
             case "win":
                 console.log("You chose: " + playerChoice);
                 console.log("The computer chose: " + computerChoice);
                 console.log("You won the round");
                 ++playerScore;
-                console.log("Current score is player: " + playerScore + " computer: " + computerScore);
+                console.log("Current score is player: " + playerScore + 
+                " computer: " + computerScore);
                 break;
-            // If computer wins add 1 to its score and tell player they lost the round
+            // If computer wins add 1 to its score and tell player
             case "lose":
                 console.log("You chose: " + playerChoice);
                 console.log("The computer chose: " + computerChoice);
                 console.log("You lost the round");
                 ++computerScore;
-                console.log("Current score is player: " + playerScore + " computer: " + computerScore);
+                console.log("Current score is player: " + playerScore + 
+                " computer: " + computerScore);
                 break;
         }
     }
