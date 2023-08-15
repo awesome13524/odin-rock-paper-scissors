@@ -62,7 +62,7 @@ function game(){
         while(keepGoing){
             playerChoice = prompt("Rock, paper, or scissors?" , "");
             if(playerChoice === null){
-                return console.log("Game cancelled");
+                return alert("Game cancelled");
             }
             playerChoice = playerChoice.toLowerCase();
             if(playerChoice === "rock" || playerChoice === "paper" || 
@@ -78,39 +78,33 @@ function game(){
         switch(result){
             //If tie tell player they tied the round
             case "tie":
-                console.log("You chose: " + playerChoice);
-                console.log("The computer chose: " + computerChoice);
-                console.log("It's a tie");
-                console.log("Current score is player: " + playerScore + 
-                " computer: " + computerScore);
+                alert("You chose: " + playerChoice + "\nThe computer chose: " +
+                computerChoice + "\nIt's a tie\nCurrent score is\nPlayer: " + 
+                playerScore + "\nComputer: " + computerScore);
                 break;
             // If player wins add 1 to their score and tell player
             case "win":
-                console.log("You chose: " + playerChoice);
-                console.log("The computer chose: " + computerChoice);
-                console.log("You won the round");
-                ++playerScore;
-                console.log("Current score is player: " + playerScore + 
-                " computer: " + computerScore);
+                alert("You chose: " + playerChoice + "\nThe computer chose: " +
+                computerChoice +
+                "\nYou won the round\nCurrent score is\nPlayer: " + 
+                ++playerScore + "\nComputer: " + computerScore);
                 break;
             // If computer wins add 1 to its score and tell player
             case "lose":
-                console.log("You chose: " + playerChoice);
-                console.log("The computer chose: " + computerChoice);
-                console.log("You lost the round");
-                ++computerScore;
-                console.log("Current score is player: " + playerScore + 
-                " computer: " + computerScore);
+                alert("You chose: " + playerChoice + "\nThe computer chose: " +
+                computerChoice +
+                "\nYou lost the round\nCurrent score is\nPlayer: " + 
+                playerScore + "\nComputer: " + ++computerScore);
                 break;
         }
     }
     
     // Display message depending on game winner
     if(playerScore === 5){
-        console.log("Congratulations! You won the game!")
+        alert("Congratulations! You won the game!");
     }
     if(computerScore === 5){
-        console.log("Game Over!")
+        alert("Game Over!");
     }
 }
 
